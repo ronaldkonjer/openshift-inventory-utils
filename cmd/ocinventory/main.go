@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/literalice/openshift-inventory-utils/inventory"
-	"github.com/literalice/openshift-inventory-utils/node"
+	"github.com/ronaldkonjer/openshift-inventory-utils/inventory"
+	"github.com/ronaldkonjer/openshift-inventory-utils/node"
 )
 
 func main() {
@@ -28,6 +28,11 @@ func main() {
 	etcd, errEtcd := node.List(*clusterArg, "etcd", *roleTagArg)
 	if errEtcd != nil {
 		log.Fatal(errEtcd)
+	}
+
+	nfs, errNfs := node.List(*clusterArg, "nfs", *roleTagArg)
+	if errNfs != nil {
+		log.Fatal(errNfs)
 	}
 
 	inventory, err := inventory.Generate(nodes, masters, etcd, *inventoryPath)

@@ -2,6 +2,24 @@
 
 
 [[projects]]
+  branch = "2.x"
+  name = "github.com/Masterminds/semver"
+  packages = ["."]
+  revision = "3c92f33da7a84de8314f3ff82e5f919b89fd1492"
+
+[[projects]]
+  name = "github.com/Masterminds/vcs"
+  packages = ["."]
+  revision = "6f1c6d150500e452704e9863f68c2559f58616bf"
+  version = "v1.12.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/armon/go-radix"
+  packages = ["."]
+  revision = "1fca145dffbcaa8fe914309b1ec0cfc67500fe61"
+
+[[projects]]
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -34,6 +52,12 @@
   version = "v1.12.59"
 
 [[projects]]
+  name = "github.com/boltdb/bolt"
+  packages = ["."]
+  revision = "2f1ce7a837dcb8da3ec595b1dac9d0632f0f99e8"
+  version = "v1.3.1"
+
+[[projects]]
   name = "github.com/ghodss/yaml"
   packages = ["."]
   revision = "0ca9ea5df5451ffdf184b4428c902747c2c11cd7"
@@ -46,9 +70,104 @@
   version = "v1.32.0"
 
 [[projects]]
+  branch = "master"
+  name = "github.com/golang/dep"
+  packages = [
+    ".",
+    "gps",
+    "gps/internal/pb",
+    "gps/paths",
+    "gps/pkgtree",
+    "internal/feedback",
+    "internal/fs",
+    "internal/importers",
+    "internal/importers/base",
+    "internal/importers/glide",
+    "internal/importers/glock",
+    "internal/importers/godep",
+    "internal/importers/govend",
+    "internal/importers/govendor",
+    "internal/importers/gvt",
+    "internal/importers/importertest",
+    "internal/importers/vndr",
+    "internal/test",
+    "internal/test/integration"
+  ]
+  revision = "4c74ecd27d7c268e1e9ce6a043c10cf7c46db40f"
+
+[[projects]]
+  name = "github.com/golang/protobuf"
+  packages = ["proto"]
+  revision = "925541529c1fa6821df4e44ce2723319eb2be768"
+  version = "v1.0.0"
+
+[[projects]]
+  name = "github.com/jmank88/nuts"
+  packages = ["."]
+  revision = "8b28145dffc87104e66d074f62ea8080edfad7c8"
+  version = "v0.3.0"
+
+[[projects]]
   name = "github.com/jmespath/go-jmespath"
   packages = ["."]
   revision = "0b12d6b5"
+
+[[projects]]
+  name = "github.com/literalice/openshift-inventory-utils"
+  packages = ["node"]
+  revision = "2f86e3782382592b3e1f1dec511a21ac3a5dd90f"
+  version = "v0.1"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/nightlyone/lockfile"
+  packages = ["."]
+  revision = "6a197d5ea61168f2ac821de2b7f011b250904900"
+
+[[projects]]
+  name = "github.com/pelletier/go-toml"
+  packages = ["."]
+  revision = "acdc4509485b587f5e675510c4f2c63e90ff68a8"
+  version = "v1.1.0"
+
+[[projects]]
+  name = "github.com/pkg/errors"
+  packages = ["."]
+  revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
+  version = "v0.8.0"
+
+[[projects]]
+  name = "github.com/ronaldkonjer/openshift-inventory-utils"
+  packages = [
+    "inventory",
+    "node"
+  ]
+  revision = "2f86e3782382592b3e1f1dec511a21ac3a5dd90f"
+  version = "v0.1"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/sdboyer/constext"
+  packages = ["."]
+  revision = "836a144573533ea4da4e6929c235fd348aed1c80"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/net"
+  packages = ["context"]
+  revision = "61147c48b25b599e5b561d2e9c4f3e1ef489ca41"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/sync"
+  packages = ["errgroup"]
+  revision = "1d60e4601c6fd243af51cc01ddf169918a5407ca"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/sys"
+  packages = ["unix"]
+  revision = "3b87a42e500a6dc65dae1a55d0b641295971163e"
 
 [[projects]]
   branch = "v2"
@@ -59,6 +178,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "5ac982692ded0b2282cc81b12d824efd6d3fd0bc9bd34678e77e393bc77a17ff"
+  inputs-digest = "ba4d82950017cc00205977156a370ce6ad566128380778a60c27e69f67681c2c"
   solver-name = "gps-cdcl"
   solver-version = 1

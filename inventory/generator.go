@@ -2,13 +2,12 @@ package inventory
 
 import (
 	"io/ioutil"
-
 	"github.com/ghodss/yaml"
-	"github.com/literalice/openshift-inventory-utils/node"
+	"github.com/ronaldkonjer/openshift-inventory-utils/node"
 )
 
 // Generate ansible inventory for openshift
-func Generate(nodes []*node.Node, dedicatedMasters []*node.Node, dedcatedEtcd []*node.Node, inventoryPath string) (string, error) {
+func Generate(nodes []*node.Node, dedicatedMasters []*node.Node, dedicatedEtcd []*node.Node, dedicatedNfs []*node.Node, inventoryPath string) (string, error) {
 	inventory, rErr := readInventory(inventoryPath)
 	if rErr != nil {
 		return "", rErr
@@ -25,12 +24,23 @@ func Generate(nodes []*node.Node, dedicatedMasters []*node.Node, dedcatedEtcd []
 	setInventoryHosts(inventory, "masters", masters)
 
 	var etcd []*node.Node
-	if len(dedcatedEtcd) > 0 {
-		etcd = dedcatedEtcd
+	if len(dedicatedEtcd) > 0 {
+		etcd = dedicatedEtcd
 	} else {
 		etcd = masters
 	}
 	setInventoryHosts(inventory, "etcd", etcd)
+
+	var nfs []*node.Node
+	if len(dedicatedNfs) > 0 {
+		nfs = dedicatedNfs
+	} else if {
+		nfs = dedicatedEtcd
+	} else {
+		nfs = masters
+	}
+	setInventoryHosts(inventory, "nfs", nfs)
+
 
 	data, mErr := yaml.Marshal(inventory)
 	if mErr != nil {

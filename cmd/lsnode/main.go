@@ -6,13 +6,13 @@ import (
 	"log"
 	"strings"
 
-	"github.com/literalice/openshift-inventory-utils/node"
+	"github.com/ronaldkonjer/openshift-inventory-utils/node"
 )
 
 // Cmd is used for handling cmd interface
 func main() {
 	clusterArg := flag.String("cluster", "", "Cluster name used in the tag: kubernetes.io/cluster/xxx")
-	roleArg := flag.String("role", "", "master / etcd / node")
+	roleArg := flag.String("role", "", "master / etcd / nfs / node")
 	roleTagArg := flag.String("role-tag", "Role", "Tag name for specifying node types")
 	flag.Parse()
 
