@@ -35,7 +35,7 @@ func main() {
 		log.Fatal(errNfs)
 	}
 
-	inventory, err := inventory.Generate(nodes, masters, etcd, *inventoryPath)
+	inventory, err := inventory.Generate(nodes, masters, etcd, nfs, *inventoryPath)
 	if err != nil {
 		log.Fatal(err)
 	}

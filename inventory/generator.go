@@ -34,7 +34,7 @@ func Generate(nodes []*node.Node, dedicatedMasters []*node.Node, dedicatedEtcd [
 	var nfs []*node.Node
 	if len(dedicatedNfs) > 0 {
 		nfs = dedicatedNfs
-	} else if {
+	} else if len(dedicatedEtcd) > 0 {
 		nfs = dedicatedEtcd
 	} else {
 		nfs = masters

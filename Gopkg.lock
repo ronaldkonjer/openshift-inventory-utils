@@ -113,12 +113,6 @@
   revision = "0b12d6b5"
 
 [[projects]]
-  name = "github.com/literalice/openshift-inventory-utils"
-  packages = ["node"]
-  revision = "2f86e3782382592b3e1f1dec511a21ac3a5dd90f"
-  version = "v0.1"
-
-[[projects]]
   branch = "master"
   name = "github.com/nightlyone/lockfile"
   packages = ["."]
@@ -135,15 +129,6 @@
   packages = ["."]
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
   version = "v0.8.0"
-
-[[projects]]
-  name = "github.com/ronaldkonjer/openshift-inventory-utils"
-  packages = [
-    "inventory",
-    "node"
-  ]
-  revision = "2f86e3782382592b3e1f1dec511a21ac3a5dd90f"
-  version = "v0.1"
 
 [[projects]]
   branch = "master"
@@ -178,6 +163,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "ba4d82950017cc00205977156a370ce6ad566128380778a60c27e69f67681c2c"
+  inputs-digest = "8daf655744746d3b382f5ca67ce452e7bb64e7b2d7d212a7b00648cd5fa0c273"
   solver-name = "gps-cdcl"
   solver-version = 1
