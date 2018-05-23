@@ -12,8 +12,8 @@ import (
 func main() {
 	masterArg := flag.String("masters", "", "Comma-separated domain list for master node")
 	etcdArg := flag.String("etcd", "", "Comma-separated domain list for etcd node")
-	nfsArg := flag.String("nfs", "", "Comma-separated domain list for nfs node")
 	nodesArg := flag.String("nodes", "", "Comma-separated domain list for nodes")
+	nfsArg := flag.String("nfs", "", "Comma-separated domain list for nfs node")
 	inventoryPath := flag.String("inventory", "", "Inventory file on which the new inventory based")
 	flag.Parse()
 

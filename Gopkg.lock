@@ -131,6 +131,15 @@
   version = "v0.8.0"
 
 [[projects]]
+  name = "github.com/ronaldkonjer/openshift-inventory-utils"
+  packages = [
+    "inventory",
+    "node"
+  ]
+  revision = "0f14e27e0fe925121fa7f803ebe6f4147dec49eb"
+  version = "v0.2"
+
+[[projects]]
   branch = "master"
   name = "github.com/sdboyer/constext"
   packages = ["."]
@@ -163,6 +172,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "8daf655744746d3b382f5ca67ce452e7bb64e7b2d7d212a7b00648cd5fa0c273"
+  inputs-digest = "ba4d82950017cc00205977156a370ce6ad566128380778a60c27e69f67681c2c"
   solver-name = "gps-cdcl"
   solver-version = 1

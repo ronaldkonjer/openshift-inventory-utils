@@ -1,9 +1,10 @@
 package inventory
 
 import (
-	"io/ioutil"
+	"fmt"
 	"github.com/ghodss/yaml"
 	"github.com/ronaldkonjer/openshift-inventory-utils/node"
+	"io/ioutil"
 )
 
 // Generate ansible inventory for openshift
@@ -33,20 +34,15 @@ func Generate(nodes []*node.Node, dedicatedMasters []*node.Node, dedicatedEtcd [
 
 	var nfs []*node.Node
 	if len(dedicatedNfs) > 0 {
-		nfs = dedicatedNfs
-	} else if len(dedicatedEtcd) > 0 {
-		nfs = dedicatedEtcd
-	} else {
-		nfs = masters
+		nfs = append(nfs, dedicatedNfs[0])
 	}
+	fmt.Print("nfs in generator is", nfs)
 	setInventoryHosts(inventory, "nfs", nfs)
-
 
 	data, mErr := yaml.Marshal(inventory)
 	if mErr != nil {
 		return "", mErr
 	}
-
 	return string(data), nil
 }
 

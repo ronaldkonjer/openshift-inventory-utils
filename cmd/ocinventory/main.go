@@ -4,10 +4,12 @@ import (
 	"flag"
 	"fmt"
 	"log"
-
-	"github.com/ronaldkonjer/openshift-inventory-utils/inventory"
+	"openshift-inventory-utils/inventory"
+	//"github.com/ronaldkonjer/openshift-inventory-utils/inventory"
 	"github.com/ronaldkonjer/openshift-inventory-utils/node"
 )
+
+//ocinventory -cluster "ocha" -inventory $HOME/template-inventory.yml > $HOME/inventory.yml
 
 func main() {
 	clusterArg := flag.String("cluster", "", "Cluster name used in the tag: kubernetes.io/cluster/xxx")
@@ -31,6 +33,7 @@ func main() {
 	}
 
 	nfs, errNfs := node.List(*clusterArg, "nfs", *roleTagArg)
+	fmt.Println("nfs in main is", nfs)
 	if errNfs != nil {
 		log.Fatal(errNfs)
 	}
