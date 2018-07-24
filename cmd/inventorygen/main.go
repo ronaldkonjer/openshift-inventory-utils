@@ -6,7 +6,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/literalice/openshift-inventory-utils/inventory"
+	"github.com/ronaldkonjer/openshift-inventory-utils/inventory"
 )
 
 func main() {

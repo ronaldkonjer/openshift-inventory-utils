@@ -6,7 +6,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/literalice/openshift-inventory-utils/node"
+	"github.com/ronaldkonjer/openshift-inventory-utils/node"
 )
 
 // Cmd is used for handling cmd interface

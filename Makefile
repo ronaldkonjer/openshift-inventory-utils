@@ -4,7 +4,7 @@ GOGET=$(GOCMD) get
 GODEP=dep
 BINARY_NAME=ocinventory
 BINARY_UNIX=$(BINARY_NAME)_unix
-DOCKER_WORK_DIR=/go/src/github.com/literalice/openshift-inventory-utils
+DOCKER_WORK_DIR=/go/src/github.com/ronaldkonjer/openshift-inventory-utils
 
 .PHONY: deps build docker-build
 
