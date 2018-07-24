@@ -20,9 +20,9 @@
 #  version = "2.4.0"
 
 
-[[constraint]]
-  branch = "v2"
-  name = "gopkg.in/yaml.v2"
+#[[constraint]]
+#  branch = "v2"
+#  name = "gopkg.in/yaml.v2"
 
 [[constraint]]
   name = "github.com/ghodss/yaml"
@@ -31,3 +31,4 @@
 [[constraint]]
   name = "github.com/aws/aws-sdk-go"
   version = "1.12.59"
+

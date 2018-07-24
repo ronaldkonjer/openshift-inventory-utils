@@ -2,6 +2,7 @@
 
 
 [[projects]]
+  digest = "1:be42c0f210f37cce78016719b00a4dd2b837d1fef403e5190b7bca95969e621c"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -28,37 +29,51 @@
     "private/protocol/rest",
     "private/protocol/xml/xmlutil",
     "service/ec2",
-    "service/sts"
+    "service/sts",
   ]
+  pruneopts = ""
   revision = "3c754f1d340244540350f0a00b940781bae9c905"
   version = "v1.12.59"
 
 [[projects]]
+  digest = "1:b13707423743d41665fd23f0c36b2f37bb49c30e94adb813319c44188a51ba22"
   name = "github.com/ghodss/yaml"
   packages = ["."]
+  pruneopts = ""
   revision = "0ca9ea5df5451ffdf184b4428c902747c2c11cd7"
   version = "v1.0.0"
 
 [[projects]]
+  digest = "1:bbc763f3c703dc3c6a99a22c1318760099b52bc00a47a36dc4462e88eee7846b"
   name = "github.com/go-ini/ini"
   packages = ["."]
+  pruneopts = ""
   revision = "32e4c1e6bc4e7d0d8451aa6b75200d19e37a536a"
   version = "v1.32.0"
 
 [[projects]]
+  digest = "1:4f767a115bc8e08576f6d38ab73c376fc1b1cd3bb5041171c9e8668cc7739b52"
   name = "github.com/jmespath/go-jmespath"
   packages = ["."]
+  pruneopts = ""
   revision = "0b12d6b5"
 
 [[projects]]
   branch = "v2"
+  digest = "1:c9d139dd52252b24607cfe3aa91d92f19760d330e22f03953633930623506a05"
   name = "gopkg.in/yaml.v2"
   packages = ["."]
+  pruneopts = ""
   revision = "c4a9fb418357aceb801272d73efd518f183700fa"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "5ac982692ded0b2282cc81b12d824efd6d3fd0bc9bd34678e77e393bc77a17ff"
+  input-imports = [
+    "github.com/aws/aws-sdk-go/aws",
+    "github.com/aws/aws-sdk-go/aws/session",
+    "github.com/aws/aws-sdk-go/service/ec2",
+    "github.com/ghodss/yaml",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
